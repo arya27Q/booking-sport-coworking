@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+  <div class="space-y-12 animate-in fade-in duration-500 pb-20">
+    
+    <div class="relative overflow-hidden bg-gradient-to-r from-[#7C3AED] to-[#A855F7] rounded-[2rem] p-6 md:p-8 text-white shadow-xl shadow-purple-200/50">
+        <div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex gap-5 items-center">
+                <div class="w-14 h-14 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-inner">
+                    @extends('layouts.app')
+
+@section('content')
 <div class="space-y-12 animate-in fade-in duration-500 pb-20">
     
     <div class="relative overflow-hidden bg-gradient-to-r from-[#7C3AED] to-[#A855F7] rounded-[2rem] p-6 md:p-8 text-white shadow-xl shadow-purple-200/50">
@@ -91,7 +100,7 @@
     <div>
         <div class="flex justify-between items-end mb-6">
             <h3 class="text-2xl font-black text-gray-800 tracking-tight">Rekomendasi Lapangan</h3>
-            <a href="#" class="text-[#7C3AED] font-bold text-sm flex items-center gap-1.5 hover:underline group">
+            <a href="/lapangan/detail" class="text-[#7C3AED] font-bold text-sm flex items-center gap-1.5 hover:underline group">
                 Lihat Semua <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
             </a>
         </div>
@@ -108,7 +117,7 @@
                     <p class="text-gray-400 text-sm flex items-center gap-1.5 italic"><i data-lucide="map-pin" class="w-4 h-4 text-gray-300"></i> GOR Senayan, Jakarta</p>
                     <div class="flex justify-between items-center pt-4">
                         <p class="text-[#7C3AED] font-black text-lg">Rp 150.000<span class="text-xs font-normal text-gray-400">/jam</span></p> 
-                        <a href="/booking/detail" class="bg-[#4F46E5] text-white px-6 py-2.5 rounded-2xl text-sm font-bold transition-all active:scale-95 shadow-lg shadow-indigo-100">Booking</a> 
+                        <a href="#" class="bg-[#4F46E5] text-white px-6 py-2.5 rounded-2xl text-sm font-bold transition-all hover:bg-[#3730a3] hover:shadow-indigo-200 hover:-translate-y-0.5 active:scale-95 shadow-lg shadow-indigo-100">Booking</a>
                     </div>
                 </div>
             </div>
@@ -124,7 +133,7 @@
                     <p class="text-gray-400 text-sm flex items-center gap-1.5 italic"><i data-lucide="map-pin" class="w-4 h-4 text-gray-300"></i> GBK Arena Lantai 8</p>
                     <div class="flex justify-between items-center pt-4">
                         <p class="text-[#7C3AED] font-black text-lg">Rp 300.000<span class="text-xs font-normal text-gray-400">/jam</span></p> 
-                        <a href="/booking/detail" class="bg-[#4F46E5] text-white px-6 py-2.5 rounded-2xl text-sm font-bold transition-all active:scale-95 shadow-lg shadow-indigo-100">Booking</a> 
+                        <a href="/lapangan/detail" class="bg-[#4F46E5] text-white px-6 py-2.5 rounded-2xl text-sm font-bold transition-all hover:bg-[#3730a3] hover:shadow-indigo-200 hover:-translate-y-0.5 active:scale-95 shadow-lg shadow-indigo-100">Booking</a> 
                     </div>
                 </div>
             </div>
@@ -140,7 +149,7 @@
                     <p class="text-gray-400 text-sm flex items-center gap-1.5 italic"><i data-lucide="map-pin" class="w-4 h-4 text-gray-300"></i> Istora Senayan</p>
                     <div class="flex justify-between items-center pt-4">
                         <p class="text-[#7C3AED] font-black text-lg">Rp 175.000<span class="text-xs font-normal text-gray-400">/jam</span></p> 
-                        <a href="/booking/detail" class="bg-[#4F46E5] text-white px-6 py-2.5 rounded-2xl text-sm font-bold transition-all active:scale-95 shadow-lg shadow-indigo-100">Booking</a> 
+                        <a href="/lapangan/detail" class="bg-[#4F46E5] text-white px-6 py-2.5 rounded-2xl text-sm font-bold transition-all hover:bg-[#3730a3] hover:shadow-indigo-200 hover:-translate-y-0.5 active:scale-95 shadow-lg shadow-indigo-100">Booking</a> 
                     </div>
                 </div>
             </div>
@@ -207,4 +216,7 @@
         lucide.createIcons();
     });
 </script>
+@endsection
+              
+           
 @endsection

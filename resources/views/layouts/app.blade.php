@@ -17,7 +17,7 @@
 </head>
 <body class="bg-[#F8FAFC]">
 
-    <div class="flex min-h-screen">
+    <div class="flex min-h-screen relative">
         
         <div x-show="sidebarOpen" 
              x-transition:enter="transition opacity-ease-out duration-300"
@@ -64,42 +64,42 @@
                 <nav class="space-y-9">
                     <div>
                         <p class="text-[11px] text-purple-200/50 font-black tracking-[0.2em] uppercase mb-4 px-1">Main</p>
-                      <ul class="space-y-2">
-                        <li>
-                            <a href="/" 
-                                class="flex items-center gap-3 p-3 rounded-2xl transition-all shadow-sm {{ request()->is('/') ? 'bg-white/10 font-semibold text-white' : 'text-purple-100/80 hover:bg-white/5 hover:text-white' }}">
-                                <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/booking/detail" 
-                                class="flex items-center gap-3 p-3 rounded-2xl transition-all {{ request()->is('booking/detail*') ? 'bg-white/10 font-semibold text-white' : 'text-purple-100/80 hover:bg-white/5 hover:text-white' }}">
-                                <i data-lucide="search" class="w-5 h-5"></i> Cari Lapangan
-                            </a>
-                        </li>
-                         <li>
-                            <a href="/open-play" 
-                                class="flex items-center gap-3 p-3 rounded-2xl transition-all {{ request()->is('open-play*') ? 'bg-white/10 font-semibold text-white' : 'text-purple-100/80 hover:bg-white/5 hover:text-white' }}">
-                                <i data-lucide="users" class="w-5 h-5"></i> Cari Lawan
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="/" 
+                                   class="flex items-center gap-3 p-3 rounded-2xl transition-all {{ request()->is('/') ? 'bg-white/20 font-bold shadow-inner' : 'text-purple-100/80 hover:bg-white/5 hover:text-white' }}">
+                                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/lapangan/detail" 
+                                   class="flex items-center gap-3 p-3 rounded-2xl transition-all {{ request()->is('lapangan/detail*') ? 'bg-white/20 font-bold shadow-inner' : 'text-purple-100/80 hover:bg-white/5 hover:text-white' }}">
+                                    <i data-lucide="search" class="w-5 h-5"></i> Cari Lapangan
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/lapangan/cari-lawan" 
+                                   class="flex items-center gap-3 p-3 rounded-2xl transition-all {{ request()->is('lapangan/cari-lawan*') ? 'bg-white/20 font-bold shadow-inner' : 'text-purple-100/80 hover:bg-white/5 hover:text-white' }}">
+                                    <i data-lucide="users" class="w-5 h-5"></i> Cari Lawan
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
                     <div>
                         <p class="text-[11px] text-purple-200/50 font-black tracking-[0.2em] uppercase mb-4 px-1">Activity</p>
                         <ul class="space-y-2">
-                            <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-purple-100/80 hover:bg-white/5 hover:text-white transition-all"><i data-lucide="clock" class="w-5 h-5 text-white/80"></i> Booking Saya</a></li>
-                            <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-purple-100/80 hover:bg-white/5 hover:text-white transition-all"><i data-lucide="heart" class="w-5 h-5 text-white/80"></i> Favorit</a></li>
+                            <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-purple-100/80 hover:bg-white/5 hover:text-white transition-all"><i data-lucide="clock" class="w-5 h-5"></i> Booking Saya</a></li>
+                            <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-purple-100/80 hover:bg-white/5 hover:text-white transition-all"><i data-lucide="heart" class="w-5 h-5"></i> Favorit</a></li>
                         </ul>
                     </div>
 
                     <div>
                         <p class="text-[11px] text-purple-200/50 font-black tracking-[0.2em] uppercase mb-4 px-1">Account</p>
                         <ul class="space-y-2">
-                            <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-purple-100/80 hover:bg-white/5 hover:text-white transition-all"><i data-lucide="wallet" class="w-5 h-5 text-white/80"></i> Saldo & Transaksi</a></li>
-                            <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-purple-100/80 hover:bg-white/5 hover:text-white transition-all"><i data-lucide="settings" class="w-5 h-5 text-white/80"></i> Pengaturan Profil</a></li>
-                            <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-red-200 hover:bg-red-500/20 transition-all mt-4"><i data-lucide="log-out" class="w-5 h-5 text-red-300"></i> Logout</a></li>
+                            <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-purple-100/80 hover:bg-white/5 hover:text-white transition-all"><i data-lucide="wallet" class="w-5 h-5"></i> Saldo & Transaksi</a></li>
+                            <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-purple-100/80 hover:bg-white/5 hover:text-white transition-all"><i data-lucide="settings" class="w-5 h-5"></i> Pengaturan Profil</a></li>
+                            <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-red-200 hover:bg-red-500/20 transition-all mt-4"><i data-lucide="log-out" class="w-5 h-5"></i> Logout</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -132,85 +132,52 @@
                 @yield('content')
             </section>
 
-          <footer class="bg-white border-t border-gray-100 pt-16 pb-8 px-8 mt-10">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-            
-            <div class="space-y-6">
-                <div>
-                    <h3 class="text-2xl font-black text-[#7C3AED] tracking-tighter">SportBooking.</h3>
-                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-[0.2em] font-bold">Premium Experience</p>
-                </div>
-                <p class="text-sm text-gray-500 leading-relaxed">
-                    Platform booking lapangan olahraga dan coworking space nomor satu di Indonesia. Kami menghadirkan kemudahan berolahraga di ujung jari Anda.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#7C3AED] hover:text-white transition-all shadow-sm">
-                        <i data-lucide="instagram" class="w-5 h-5"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#7C3AED] hover:text-white transition-all shadow-sm">
-                        <i data-lucide="facebook" class="w-5 h-5"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#7C3AED] hover:text-white transition-all shadow-sm">
-                        <i data-lucide="twitter" class="w-5 h-5"></i>
-                    </a>
-                </div>
-            </div>
+            <footer class="bg-white border-t border-gray-100 pt-16 pb-8 px-8">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-2xl font-black text-[#7C3AED] tracking-tighter">SportBooking.</h3>
+                                <p class="text-xs text-gray-400 mt-1 uppercase tracking-[0.2em] font-bold">Premium Experience</p>
+                            </div>
+                            <p class="text-sm text-gray-500 leading-relaxed">Platform booking lapangan olahraga nomor satu di Indonesia.</p>
+                            <div class="flex gap-4">
+                                <a href="#" class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#7C3AED] hover:text-white transition-all shadow-sm"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                                <a href="#" class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#7C3AED] hover:text-white transition-all shadow-sm"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                            </div>
+                        </div>
 
-            <div>
-                <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">Layanan Kami</h4>
-                <ul class="space-y-4">
-                    <li><a href="#" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all flex items-center gap-2 font-medium">Cari Lapangan</a></li>
-                    <li><a href="#" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all flex items-center gap-2 font-medium">Open Play (Cari Lawan)</a></li>
-                    <li><a href="#" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all flex items-center gap-2 font-medium">Sewa Perlengkapan</a></li>
-                    <li><a href="#" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all flex items-center gap-2 font-medium">Membership Gold</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">Dukungan</h4>
-                <ul class="space-y-4">
-                    <li><a href="#" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all font-medium">Help Center</a></li>
-                    <li><a href="#" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all font-medium">Cara Booking</a></li>
-                    <li><a href="#" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all font-medium">Ketentuan Pengembalian</a></li>
-                    <li><a href="#" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all font-medium">Kontak Kami</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">Aplikasi Mobile</h4>
-                <p class="text-sm text-gray-500 mb-6 font-medium">Dapatkan pengalaman booking lebih cepat melalui aplikasi mobile kami.</p>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-3 bg-gray-900 text-white p-3 rounded-2xl cursor-pointer hover:bg-gray-800 transition-all border border-gray-700">
-                        <i data-lucide="play" class="w-6 h-6 fill-white"></i>
                         <div>
-                            <p class="text-[10px] uppercase opacity-60 leading-none">Get it on</p>
-                            <p class="text-sm font-bold leading-none mt-1">Google Play</p>
+                            <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">Layanan Kami</h4>
+                            <ul class="space-y-4">
+                                <li><a href="/lapangan/detail" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all font-medium">Cari Lapangan</a></li>
+                                <li><a href="/lapangan/cari-lawan" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all font-medium">Open Play</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">Dukungan</h4>
+                            <ul class="space-y-4">
+                                <li><a href="#" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all font-medium">Help Center</a></li>
+                                <li><a href="#" class="text-sm text-gray-500 hover:text-[#7C3AED] transition-all font-medium">Kontak Kami</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">Aplikasi Mobile</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3 bg-gray-900 text-white p-3 rounded-2xl cursor-pointer hover:bg-gray-800 transition-all border border-gray-700">
+                                    <i data-lucide="play" class="w-6 h-6"></i>
+                                    <div><p class="text-[10px] uppercase opacity-60">Get it on</p><p class="text-sm font-bold">Google Play</p></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-3 bg-gray-900 text-white p-3 rounded-2xl cursor-pointer hover:bg-gray-800 transition-all border border-gray-700">
-                        <i data-lucide="apple" class="w-6 h-6 fill-white"></i>
-                        <div>
-                            <p class="text-[10px] uppercase opacity-60 leading-none">Download on the</p>
-                            <p class="text-sm font-bold leading-none mt-1">App Store</p>
-                        </div>
+                    <div class="pt-8 border-t border-gray-100 text-center md:text-left">
+                        <p class="text-sm text-gray-400">&copy; 2026 SportBooking. Hub Lapangan Terpercaya.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-sm text-gray-400 font-medium">
-                &copy; 2026 <span class="text-[#7C3AED] font-black tracking-tight">SportBooking.</span> Hub Lapangan Terpercaya.
-            </div>
-            <div class="flex gap-8">
-                <a href="#" class="text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-[#7C3AED] transition-all">Privacy Policy</a>
-                <a href="#" class="text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-[#7C3AED] transition-all">Terms of Service</a>
-                <a href="#" class="text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-[#7C3AED] transition-all">Cookies</a>
-            </div>
-        </div>
-    </div>
-</footer>
+            </footer>
         </main>
     </div>
 
