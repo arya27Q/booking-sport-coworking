@@ -1,15 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="space-y-12 animate-in fade-in duration-500 pb-20">
-    
-    <div class="relative overflow-hidden bg-gradient-to-r from-[#7C3AED] to-[#A855F7] rounded-[2rem] p-6 md:p-8 text-white shadow-xl shadow-purple-200/50">
-        <div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex gap-5 items-center">
-                <div class="w-14 h-14 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-inner">
-                    @extends('layouts.app')
 
-@section('content')
+
 <div class="space-y-12 animate-in fade-in duration-500 pb-20">
     
     <div class="relative overflow-hidden bg-gradient-to-r from-[#7C3AED] to-[#A855F7] rounded-[2rem] p-6 md:p-8 text-white shadow-xl shadow-purple-200/50">
@@ -107,13 +100,13 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-sm group hover:shadow-xl transition-all duration-300">
                 <div class="relative h-52 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1763775594018-4a84eeadd83d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGZ1dHNhbHxlbnwwfHwwfHx8MA%3D%3D" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-2xl text-[11px] font-black text-gray-800 shadow-sm flex items-center gap-1">
                         <span class="text-yellow-500">★</span> 4.8 
                     </div>
                 </div>
                 <div class="p-6 space-y-4">
-                    <h4 class="font-bold text-xl text-gray-800 mb-1 leading-tight">Lapangan Futsal ABC</h4> 
+                    <h4 class="font-bold text-xl text-gray-800 mb-1 leading-tight">Lapangan Futsal </h4> 
                     <p class="text-gray-400 text-sm flex items-center gap-1.5 italic"><i data-lucide="map-pin" class="w-4 h-4 text-gray-300"></i> GOR Senayan, Jakarta</p>
                     <div class="flex justify-between items-center pt-4">
                         <p class="text-[#7C3AED] font-black text-lg">Rp 150.000<span class="text-xs font-normal text-gray-400">/jam</span></p> 
@@ -219,4 +212,3 @@
 @endsection
               
            
-@endsection

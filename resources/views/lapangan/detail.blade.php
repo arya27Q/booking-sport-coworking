@@ -18,6 +18,7 @@
                     <option>Futsal</option>
                     <option>Badminton</option>
                     <option>Basketball</option>
+                    <option>Tennis</option>
                 </select>
             </div>
 
@@ -33,7 +34,7 @@
             <div class="space-y-4">
                 <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">Fasilitas</label>
                 <div class="space-y-3">
-                    @foreach(['AC' => 'wind', 'WiFi' => 'wifi', 'Kantin' => 'coffee', 'Parkir Luas' => 'p-square'] as $label => $icon)
+                    @foreach(['AC' => 'wind', 'WiFi' => 'wifi', 'Kantin' => 'coffee', 'Parkir Luas' => 'parking-circle'] as $label => $icon)
                     <label class="flex items-center gap-3 cursor-pointer group">
                         <input type="checkbox" class="w-5 h-5 rounded-lg border-gray-200 text-[#7C3AED] focus:ring-[#7C3AED]/20">
                         <span class="flex items-center gap-2 text-sm font-bold text-gray-600 group-hover:text-[#7C3AED] transition-colors">
@@ -66,7 +67,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pb-20">
             <div class="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-sm group hover:shadow-xl transition-all duration-300">
                 <div class="relative h-52 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1763775594018-4a84eeadd83d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGZ1dHNhbHxlbnwwfHwwfHx8MA%3D%3D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -76,7 +77,7 @@
                 </div>
                 <div class="p-6 space-y-4">
                     <div>
-                        <h4 class="font-bold text-xl text-gray-800 mb-1 leading-tight group-hover:text-[#7C3AED] transition-colors">Lapangan Futsal ABC</h4> 
+                        <h4 class="font-bold text-xl text-gray-800 mb-1 leading-tight group-hover:text-[#7C3AED] transition-colors">Lapangan Futsal </h4> 
                         <p class="text-gray-400 text-sm flex items-center gap-1.5 italic mb-3"><i data-lucide="map-pin" class="w-4 h-4 text-gray-300"></i> GOR Senayan, Jakarta</p>
                         <div class="flex flex-wrap gap-2 pt-2">
                             <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
@@ -84,6 +85,9 @@
                             </div>
                             <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
                                 <i data-lucide="shower-head" class="w-3 h-3 text-teal-500"></i> Kamar Mandi
+                            </div>
+                            <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
+                                <i data-lucide="parking-circle" class="w-3 h-3 text-gray-400"></i> Parkir Luas
                             </div>
                             <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
                                 <i data-lucide="wifi" class="w-3 h-3 text-purple-400"></i> Free WiFi
@@ -95,7 +99,7 @@
                     </div>
                     <div class="flex justify-between items-center pt-4 border-t border-gray-50">
                         <p class="text-[#7C3AED] font-black text-lg">Rp 150.000<span class="text-xs font-normal text-gray-400">/jam</span></p> 
-                        <a href="{{ route('lapangan.detail') }}" class="bg-[#4F46E5] text-white px-6 py-2.5 rounded-2xl text-sm font-bold transition-all hover:bg-[#3730a3] hover:shadow-indigo-200 hover:-translate-y-0.5 active:scale-95 shadow-lg shadow-indigo-100 uppercase tracking-widest">Booking</a>
+                        <a href="{{ route('lapangan.detail') }}" class="bg-[#4F46E5] text-white px-6 py-2.5 rounded-2xl text-sm font-bold transition-all hover:bg-[#3730a3] hover:shadow-indigo-200 hover:-translate-y-0.5 hover- active:scale-95 shadow-lg shadow-indigo-100 uppercase tracking-widest">Booking</a>
                     </div>
                 </div>
             </div>
@@ -119,6 +123,9 @@
                                 <i data-lucide="shower-head" class="w-3 h-3 text-teal-500"></i> Kamar Mandi
                             </div>
                             <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
+                                <i data-lucide="parking-circle" class="w-3 h-3 text-gray-400"></i> Parkir Luas
+                            </div>
+                            <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
                                 <i data-lucide="wifi" class="w-3 h-3 text-purple-400"></i> Free WiFi
                             </div>
                             <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
@@ -135,26 +142,71 @@
 
             <div class="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-sm group hover:shadow-xl transition-all duration-300">
                 <div class="relative h-52 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1763775594018-4a84eeadd83d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGZ1dHNhbHxlbnwwfHwwfHx8MA%3D%3D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="https://cdn.oneesports.gg/cdn-data/2022/12/MLBB_M4_WorldChampion_TennisIndoorSenayan.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-2xl text-[11px] font-black text-gray-800 shadow-sm flex items-center gap-1">
-                        <span class="text-yellow-500">★</span> 4.8 
+                        <span class="text-yellow-500">★</span> 4.7
                     </div>
                 </div>
                 <div class="p-6 space-y-4">
                     <div>
-                        <h4 class="font-bold text-xl text-gray-800 mb-1 leading-tight group-hover:text-[#7C3AED] transition-colors">Lapangan Futsal ABC</h4> 
-                        <p class="text-gray-400 text-sm flex items-center gap-1.5 italic mb-3"><i data-lucide="map-pin" class="w-4 h-4 text-gray-300"></i> GOR Senayan, Jakarta</p>
+                        <h4 class="font-bold text-xl text-gray-800 mb-1 leading-tight group-hover:text-[#7C3AED] transition-colors">Senayan Tennis Center</h4> 
+                        <p class="text-gray-400 text-sm flex items-center gap-1.5 italic mb-3"><i data-lucide="map-pin" class="w-4 h-4 text-gray-300"></i> Lapangan Tennis Outdoor, Senayan</p>
                         <div class="flex flex-wrap gap-2 pt-2">
-                            <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
-                                <i data-lucide="wind" class="w-3 h-3 text-blue-500"></i> Indoor AC
+                             <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
+                                <i data-lucide="snowflake" class="w-3 h-3 text-blue-400"></i> Indoor AC
                             </div>
                             <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
                                 <i data-lucide="shower-head" class="w-3 h-3 text-teal-500"></i> Kamar Mandi
                             </div>
+                            <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
+                                <i data-lucide="parking-circle" class="w-3 h-3 text-gray-400"></i> Parkir Luas
+                            </div>
+                            <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
+                                <i data-lucide="wifi" class="w-3 h-3 text-purple-400"></i> Free WiFi
+                            </div>
+                            <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
+                                <i data-lucide="utensils" class="w-3 h-3 text-red-400"></i> Food Court
+                            </div>
                         </div>
                     </div>
                     <div class="flex justify-between items-center pt-4 border-t border-gray-50">
-                        <p class="text-[#7C3AED] font-black text-lg">Rp 150.000<span class="text-xs font-normal text-gray-400">/jam</span></p> 
+                        <p class="text-[#7C3AED] font-black text-lg">Rp 100.000<span class="text-xs font-normal text-gray-400">/jam</span></p> 
+                        <a href="{{ route('lapangan.detail') }}" class="bg-[#4F46E5] text-white px-6 py-2.5 rounded-2xl text-sm font-bold transition-all hover:bg-[#3730a3] hover:shadow-indigo-200 hover:-translate-y-0.5 active:scale-95 shadow-lg shadow-indigo-100 uppercase tracking-widest">Booking</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-sm group hover:shadow-xl transition-all duration-300">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://th.bing.com/th/id/OIP.dObfBb9icQZprm72ZortDgHaD4?w=328&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-2xl text-[11px] font-black text-gray-800 shadow-sm flex items-center gap-1">
+                        <span class="text-yellow-500">★</span> 4.8
+                    </div>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div>
+                        <h4 class="font-bold text-xl text-gray-800 mb-1 leading-tight group-hover:text-[#7C3AED] transition-colors">Badminton Court Istora</h4> 
+                        <p class="text-gray-400 text-sm flex items-center gap-1.5 italic mb-3"><i data-lucide="map-pin" class="w-4 h-4 text-gray-300"></i> Gedung Istora Senayan</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                             <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
+                                <i data-lucide="snowflake" class="w-3 h-3 text-blue-400"></i> Indoor AC
+                            </div>
+                            <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
+                                <i data-lucide="shower-head" class="w-3 h-3 text-teal-500"></i> Kamar Mandi
+                            </div>
+                            <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
+                                <i data-lucide="parking-circle" class="w-3 h-3 text-gray-400"></i> Parkir Luas
+                            </div>
+                            <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
+                                <i data-lucide="wifi" class="w-3 h-3 text-purple-400"></i> Free WiFi
+                            </div>
+                            <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100/50 uppercase text-[9px] font-black text-gray-500">
+                                <i data-lucide="utensils" class="w-3 h-3 text-red-400"></i> Food Court
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-gray-50">
+                        <p class="text-[#7C3AED] font-black text-lg">Rp 120.000<span class="text-xs font-normal text-gray-400">/jam</span></p> 
                         <a href="{{ route('lapangan.detail') }}" class="bg-[#4F46E5] text-white px-6 py-2.5 rounded-2xl text-sm font-bold transition-all hover:bg-[#3730a3] hover:shadow-indigo-200 hover:-translate-y-0.5 active:scale-95 shadow-lg shadow-indigo-100 uppercase tracking-widest">Booking</a>
                     </div>
                 </div>
