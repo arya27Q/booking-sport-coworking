@@ -98,7 +98,7 @@
                         <p class="text-[11px] text-purple-200/50 font-black tracking-[0.2em] uppercase mb-4 px-1">Account</p>
                         <ul class="space-y-2">
                             <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-purple-100/80 hover:bg-white/5 hover:text-white transition-all"><i data-lucide="wallet" class="w-5 h-5"></i> Saldo & Transaksi</a></li>
-                            <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-purple-100/80 hover:bg-white/5 hover:text-white transition-all"><i data-lucide="settings" class="w-5 h-5"></i> Pengaturan Profil</a></li>
+                            <li><a href="/profile" class="flex items-center gap-3 p-3 rounded-2xl {{ request()->is('profile*') ? 'bg-white/20 font-bold shadow-inner' : 'text-purple-100/80 hover:bg-white/5 hover:text-white' }} transition-all"><i data-lucide="settings" class="w-5 h-5"></i> Pengaturan Profil</a></li>
                             <li><a href="#" class="flex items-center gap-3 p-3 rounded-2xl text-red-200 hover:bg-red-500/20 transition-all mt-4"><i data-lucide="log-out" class="w-5 h-5"></i> Logout</a></li>
                         </ul>
                     </div>
@@ -129,8 +129,7 @@
             </header>
 
             <section class="p-6 md:p-10 flex-grow">
-                @yield('content')
-            </section>
+                {{ $slot }} </section>
 
             <footer class="bg-white border-t border-gray-100 pt-16 pb-8 px-8">
                 <div class="max-w-7xl mx-auto">
